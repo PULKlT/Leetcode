@@ -3,16 +3,12 @@ public:
     int largestPerimeter(vector<int>& nums) {
         sort(nums.begin(),nums.end());
         reverse(nums.begin(),nums.end());        
-        int ans=0,i=0;
-        while(i<=nums.size()-3)
+
+        for(int i=0;i<=nums.size()-3;i++)
         {
             if(nums[i+1]+nums[i+2]>nums[i])
-            {
-                ans=nums[i]+nums[i+1]+nums[i+2];
-                break;
-            }
-            i++;
+                return (nums[i]+nums[i+1]+nums[i+2]);
         }
-        return ans;
+        return 0;
     }
 };
