@@ -16,10 +16,6 @@ public:
         one = two = head;
         while(two!=NULL&&two->next!=NULL){
             one=one->next;
-            if(two->next==NULL){
-                one=one->next;
-                break;
-            }
             two=two->next->next;
         }
         return one;
