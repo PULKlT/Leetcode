@@ -14,8 +14,8 @@ public:
         if(head==NULL||head->next==NULL)  return head;
         
         ListNode *pre,*cur,*nex;
-        pre=head;
-        cur=head->next;        
+        pre=NULL;
+        cur=head;        
         nex=cur->next;
         while(nex!=NULL){
             cur->next=pre;
@@ -23,7 +23,6 @@ public:
             cur=nex;
             nex=nex->next;
         }
-        head->next=NULL;
         cur->next=pre;
 
         return cur;
