@@ -6,18 +6,29 @@ public:
         vector<int> vec = intervals[0];
         if(intervals.size()==0)     return ans;
         
-        for(int i=0;i<intervals.size()-1;i++)
+        for(auto it : intervals)
         {
-            if(intervals[i+1][0] <= vec[1])
-            {
-                if(vec[1]<intervals[i+1][1])
-                    vec[1]=intervals[i+1][1];
+            if(it[0]<=vec[1]){
+                vec[1] = max(vec[1],it[1]);
             }
             else{
                 ans.push_back(vec);
-                vec = intervals[i+1];
-            }                
+                vec = it;
+            }
         }
+        
+        // for(int i=0;i<intervals.size()-1;i++)
+        // {
+        //     if(intervals[i+1][0] <= vec[1])
+        //     {
+        //         if(vec[1]<intervals[i+1][1])
+        //             vec[1]=intervals[i+1][1];
+        //     }
+        //     else{
+        //         ans.push_back(vec);
+        //         vec = intervals[i+1];
+        //     }                
+        // }
         ans.push_back(vec);
     return ans;
     }
