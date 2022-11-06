@@ -5,7 +5,7 @@ public:
         
         while(lo<hi){
             mid = lo+(hi-lo)/2;
-            if(nums[mid]==nums[hi]&&mid!=hi){
+            if(nums[mid]==nums[hi]){
                 hi--;
                 continue;
             }
