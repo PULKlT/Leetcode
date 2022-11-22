@@ -15,9 +15,9 @@ public:
                     j--;
             else
                 i++;
-            if(s[j]=='a'||s[j]=='A'||s[j]=='e'||s[j]=='E'||s[j]=='i'||s[j]=='I'||s[j]=='o'||s[j]=='O'||s[j]=='u'||s[j]=='U');
-            else
-                j--;
+            // if(s[j]=='a'||s[j]=='A'||s[j]=='e'||s[j]=='E'||s[j]=='i'||s[j]=='I'||s[j]=='o'||s[j]=='O'||s[j]=='u'||s[j]=='U')
+            // else
+            //     j--;
         }
         return s;
     }
