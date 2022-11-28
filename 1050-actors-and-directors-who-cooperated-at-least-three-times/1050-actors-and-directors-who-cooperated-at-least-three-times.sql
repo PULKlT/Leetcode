@@ -9,7 +9,6 @@
 # group by actor_id
 # ;
 
-select actor_id, director_id
-from ActorDirector
-group by 1,2
-having count(2)>=3
+SELECT actor_id, director_id FROM ActorDirector
+GROUP BY 1,2 
+HAVING COUNT(timestamp)>=3
