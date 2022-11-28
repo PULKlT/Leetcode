@@ -9,6 +9,10 @@
 # group by actor_id
 # ;
 
-SELECT actor_id, director_id FROM ActorDirector
-GROUP BY 1,2 
-HAVING COUNT(timestamp)>2
+# SELECT actor_id, director_id FROM ActorDirector
+# GROUP BY 1,2 
+# HAVING COUNT(timestamp)>2
+
+SELECT DISTINCT actor_id, director_id FROM ActorDirector
+    group by actor_id, director_id
+    HAVING count(timestamp) > 2;
