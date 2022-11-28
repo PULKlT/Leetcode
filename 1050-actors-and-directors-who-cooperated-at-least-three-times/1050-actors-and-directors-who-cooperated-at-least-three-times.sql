@@ -12,4 +12,4 @@
 select actor_id, director_id
 from ActorDirector
 group by 1,2
-having count(1)>=3
+having count(2)>=3
