@@ -6,11 +6,14 @@ public:
         for(int i=0;i<nums.size();i++){
             st.insert(nums[i]);
         }
-        for(int i=1;i<=st.size()+1;i++){
+        int i = 1;
+        // for(int i=1;i<=st.size()+1;i++){
+        for(auto it : st){
             if(st.find(i)==st.end())
                 return i;
+            i++;
         }
-        return -1;
+        return i;
         
     }
 };
