@@ -7,11 +7,11 @@ public:
             st.insert(nums[i]);
         }
         int i = 1;
-        // for(int i=1;i<=st.size()+1;i++){
-        for(auto it : st){
+        for(int i=1;i<=st.size()+1;i++){
+        // for(auto it : st){
             if(st.find(i)==st.end())
                 return i;
-            i++;
+            // i++;
         }
         return i;
         
